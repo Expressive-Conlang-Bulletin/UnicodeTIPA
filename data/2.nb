@@ -1,0 +1,588 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     27662,        580]
+NotebookOptionsPosition[     25725,        538]
+NotebookOutlinePosition[     26280,        557]
+CellTagsIndexPosition[     26237,        554]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"SetDirectory", "@", 
+  RowBox[{"NotebookDirectory", "[", "]"}]}]], "Code",
+ CellChangeTimes->{{3.868258074166606*^9, 3.868258080391183*^9}},
+ CellLabel->"In[67]:=",ExpressionUUID->"627f2ab0-9582-40be-aa9f-6fff963a73ce"],
+
+Cell[BoxData["\<\"/home/admin/Document/Project/EAL/Expressive/unicodetipa/\
+data\"\>"], "Output",
+ CellChangeTimes->{3.8682580834262247`*^9},
+ CellLabel->"Out[67]=",ExpressionUUID->"c661f1fb-0638-48cd-a9d8-457d9fedd6da"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Import", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<TSV\>\"", ",", "\"\<RawData\>\""}], "}"}], ",", 
+       RowBox[{"CharacterEncoding", "->", "\"\<UTF8\>\""}]}], "]"}], "&"}], "/@", 
+    RowBox[{"{", 
+     RowBox[{"\"\<IPAExtension.tsv\>\"", ",", "\"\<SpacingModifier.tsv\>\""}],
+      "}"}]}], " ", "//", "Catenate"}], ";"}], "\n", 
+ RowBox[{"letters", " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"#4", "===", "\"\<\>\""}], ",", " ", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"#5", "===", "\"\<\>\""}], ",", " ", "Nothing", ",", " ", 
+        RowBox[{
+         RowBox[{"FromDigits", "@", "#"}], "->", "#5"}]}], "]"}], ",", " ", 
+      RowBox[{
+       RowBox[{"FromDigits", "@", "#"}], "->", "#4"}]}], "]"}], "&"}], "@@@", 
+   "%"}]}]}], "Code",
+ CellChangeTimes->{{3.868269345184791*^9, 3.868269419825899*^9}, {
+  3.868269575332816*^9, 3.86826974111003*^9}, {3.868269791329473*^9, 
+  3.868269809699074*^9}, {3.868270107210001*^9, 3.868270145356687*^9}, {
+  3.8682702297404127`*^9, 3.868270230036262*^9}, {3.868270292745719*^9, 
+  3.868270327013535*^9}, {3.8682715912149687`*^9, 3.868271606400449*^9}},
+ CellLabel->
+  "In[274]:=",ExpressionUUID->"e99f7725-4311-4479-a35b-44d7375b82a1"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"592", "\[Rule]", "\<\"5\"\>"}], ",", 
+   RowBox[{"593", "\[Rule]", "\<\"A\"\>"}], ",", 
+   RowBox[{"594", "\[Rule]", "\<\"6\"\>"}], ",", 
+   RowBox[{"595", "\[Rule]", "\<\"\\\\!b\"\>"}], ",", 
+   RowBox[{"596", "\[Rule]", "\<\"O\"\>"}], ",", 
+   RowBox[{"597", "\[Rule]", "\<\"C\"\>"}], ",", 
+   RowBox[{"598", "\[Rule]", "\<\"\\\\:d\"\>"}], ",", 
+   RowBox[{"599", "\[Rule]", "\<\"\\\\!d\"\>"}], ",", 
+   RowBox[{"600", "\[Rule]", "\<\"9\"\>"}], ",", 
+   RowBox[{"601", "\[Rule]", "\<\"@\"\>"}], ",", 
+   RowBox[{"602", "\[Rule]", "\<\"\\\\textrhookschwa\"\>"}], ",", 
+   RowBox[{"603", "\[Rule]", "\<\"E\"\>"}], ",", 
+   RowBox[{"604", "\[Rule]", "\<\"3\"\>"}], ",", 
+   RowBox[{"605", "\[Rule]", "\<\"\\\\textrhookrevepsilon\"\>"}], ",", 
+   RowBox[{"606", "\[Rule]", "\<\"\\\\textcloserevepsilon\"\>"}], ",", 
+   RowBox[{"607", "\[Rule]", "\<\"\\\\textbardotlessj\"\>"}], ",", 
+   RowBox[{"608", "\[Rule]", "\<\"\\\\!g\"\>"}], ",", 
+   RowBox[{"609", "\[Rule]", "\<\"g\"\>"}], ",", 
+   RowBox[{"610", "\[Rule]", "\<\"\\\\;G\"\>"}], ",", 
+   RowBox[{"611", "\[Rule]", "\<\"G\"\>"}], ",", 
+   RowBox[{"612", "\[Rule]", "\<\"\\\\textramshorns\"\>"}], ",", 
+   RowBox[{"613", "\[Rule]", "\<\"4\"\>"}], ",", 
+   RowBox[{"614", "\[Rule]", "\<\"H\"\>"}], ",", 
+   RowBox[{"615", "\[Rule]", "\<\"\\\\texththeng\"\>"}], ",", 
+   RowBox[{"616", "\[Rule]", "\<\"1\"\>"}], ",", 
+   RowBox[{"618", "\[Rule]", "\<\"I\"\>"}], ",", 
+   RowBox[{"619", "\[Rule]", "\<\"\\\\textltilde\"\>"}], ",", 
+   RowBox[{"620", "\[Rule]", "\<\"\\\\textbeltl\"\>"}], ",", 
+   RowBox[{"621", "\[Rule]", "\<\"\\\\:l\"\>"}], ",", 
+   RowBox[{"622", "\[Rule]", "\<\"\\\\textlyoghlig\"\>"}], ",", 
+   RowBox[{"623", "\[Rule]", "\<\"W\"\>"}], ",", 
+   RowBox[{"624", "\[Rule]", "\<\"\\\\textturnmrleg\"\>"}], ",", 
+   RowBox[{"625", "\[Rule]", "\<\"M\"\>"}], ",", 
+   RowBox[{"626", "\[Rule]", "\<\"\\\\textltailn\"\>"}], ",", 
+   RowBox[{"627", "\[Rule]", "\<\"\\\\:n\"\>"}], ",", 
+   RowBox[{"628", "\[Rule]", "\<\"\\\\;N\"\>"}], ",", 
+   RowBox[{"629", "\[Rule]", "\<\"8\"\>"}], ",", 
+   RowBox[{"630", "\[Rule]", "\<\"\\\\OE\"\>"}], ",", 
+   RowBox[{"632", "\[Rule]", "\<\"F\"\>"}], ",", 
+   RowBox[{"633", "\[Rule]", "\<\"\\\\*r\"\>"}], ",", 
+   RowBox[{"634", "\[Rule]", "\<\"\\\\textturnlonglegr\"\>"}], ",", 
+   RowBox[{"635", "\[Rule]", "\<\"\\\\:R\"\>"}], ",", 
+   RowBox[{"636", "\[Rule]", "\<\"\\\\textlonglegr\"\>"}], ",", 
+   RowBox[{"637", "\[Rule]", "\<\"\\\\:r\"\>"}], ",", 
+   RowBox[{"638", "\[Rule]", "\<\"R\"\>"}], ",", 
+   RowBox[{"640", "\[Rule]", "\<\"\\\\;R\"\>"}], ",", 
+   RowBox[{"641", "\[Rule]", "\<\"K\"\>"}], ",", 
+   RowBox[{"642", "\[Rule]", "\<\"\\\\:s\"\>"}], ",", 
+   RowBox[{"643", "\[Rule]", "\<\"S\"\>"}], ",", 
+   RowBox[{"644", "\[Rule]", "\<\"\\\\!j\"\>"}], ",", 
+   RowBox[{"646", "\[Rule]", "\<\"\\\\textctesh\"\>"}], ",", 
+   RowBox[{"647", "\[Rule]", "\<\"\\\\*t\"\>"}], ",", 
+   RowBox[{"648", "\[Rule]", "\<\"\\\\:t\"\>"}], ",", 
+   RowBox[{"649", "\[Rule]", "\<\"\\\\textbaru\"\>"}], ",", 
+   RowBox[{"650", "\[Rule]", "\<\"U\"\>"}], ",", 
+   RowBox[{"651", "\[Rule]", "\<\"V\"\>"}], ",", 
+   RowBox[{"652", "\[Rule]", "\<\"\\\\textturnv\"\>"}], ",", 
+   RowBox[{"653", "\[Rule]", "\<\"\\\\*w\"\>"}], ",", 
+   RowBox[{"654", "\[Rule]", "\<\"L\"\>"}], ",", 
+   RowBox[{"655", "\[Rule]", "\<\"Y\"\>"}], ",", 
+   RowBox[{"656", "\[Rule]", "\<\"\\\\:z\"\>"}], ",", 
+   RowBox[{"657", "\[Rule]", "\<\"\\\\textctz\"\>"}], ",", 
+   RowBox[{"658", "\[Rule]", "\<\"Z\"\>"}], ",", 
+   RowBox[{"659", "\[Rule]", "\<\"\\\\textctyogh\"\>"}], ",", 
+   RowBox[{"660", "\[Rule]", "\<\"P\"\>"}], ",", 
+   RowBox[{"661", "\[Rule]", "\<\"Q\"\>"}], ",", 
+   RowBox[{"662", "\[Rule]", "\<\"\\\\textinvglotstop\"\>"}], ",", 
+   RowBox[{"663", "\[Rule]", "\<\"\\\\textstretchc\"\>"}], ",", 
+   RowBox[{"664", "\[Rule]", "\<\"\\\\!o\"\>"}], ",", 
+   RowBox[{"665", "\[Rule]", "\<\"\\\\;B\"\>"}], ",", 
+   RowBox[{"667", "\[Rule]", "\<\"\\\\!G\"\>"}], ",", 
+   RowBox[{"668", "\[Rule]", "\<\"\\\\;H\"\>"}], ",", 
+   RowBox[{"669", "\[Rule]", "\<\"J\"\>"}], ",", 
+   RowBox[{"670", "\[Rule]", "\<\"\\\\*k\"\>"}], ",", 
+   RowBox[{"671", "\[Rule]", "\<\"\\\\;L\"\>"}], ",", 
+   RowBox[{"672", "\[Rule]", "\<\"\\\\texthtq\"\>"}], ",", 
+   RowBox[{"673", "\[Rule]", "\<\"\\\\textbarglotstop\"\>"}], ",", 
+   RowBox[{"674", "\[Rule]", "\<\"\\\\textbarrevglotstop\"\>"}], ",", 
+   RowBox[{"675", "\[Rule]", "\<\"\\\\textdzlig\"\>"}], ",", 
+   RowBox[{"676", "\[Rule]", "\<\"\\\\textdyoghlig\"\>"}], ",", 
+   RowBox[{"677", "\[Rule]", "\<\"\\\\textdctzlig\"\>"}], ",", 
+   RowBox[{"678", "\[Rule]", "\<\"\\\\texttslig\"\>"}], ",", 
+   RowBox[{"679", "\[Rule]", "\<\"\\\\textteshlig\"\>"}], ",", 
+   RowBox[{"680", "\[Rule]", "\<\"\\\\texttctclig\"\>"}], ",", 
+   RowBox[{"688", "\[Rule]", "\<\"\\\\super h\"\>"}], ",", 
+   RowBox[{"689", "\[Rule]", "\<\"\\\\super H\"\>"}], ",", 
+   RowBox[{"690", "\[Rule]", "\<\"\\\\super j\"\>"}], ",", 
+   RowBox[{"691", "\[Rule]", "\<\"\\\\super r\"\>"}], ",", 
+   RowBox[{"692", "\[Rule]", "\<\"\\\\super{\\\\*r}\"\>"}], ",", 
+   RowBox[{"693", "\[Rule]", "\<\"\\\\super{\\\\:R}\"\>"}], ",", 
+   RowBox[{"694", "\[Rule]", "\<\"\\\\super K\"\>"}], ",", 
+   RowBox[{"695", "\[Rule]", "\<\"\\\\super w\"\>"}], ",", 
+   RowBox[{"696", "\[Rule]", "\<\"\\\\super y\"\>"}], ",", 
+   RowBox[{"700", "\[Rule]", "\<\"'\"\>"}], ",", 
+   RowBox[{"701", "\[Rule]", "\<\"\\\\textrevapostrophe\"\>"}], ",", 
+   RowBox[{
+   "702", "\[Rule]", "\<\"\\\\textsuperscript{\\\\textsubrhalfring{}}\"\>"}], 
+   ",", 
+   RowBox[{
+   "703", "\[Rule]", "\<\"\\\\textsuperscript{\\\\textsublhalfring{}}\"\>"}], 
+   ",", 
+   RowBox[{"704", "\[Rule]", "\<\"\\\\super P\"\>"}], ",", 
+   RowBox[{"705", "\[Rule]", "\<\"\\\\super Q\"\>"}], ",", 
+   RowBox[{"712", "\[Rule]", "\<\"\\\"\"\>"}], ",", 
+   RowBox[{"716", "\[Rule]", "\<\"\\\"\\\"\"\>"}], ",", 
+   RowBox[{"720", "\[Rule]", "\<\":\"\>"}], ",", 
+   RowBox[{"721", "\[Rule]", "\<\";\"\>"}], ",", 
+   RowBox[{"734", "\[Rule]", "\<\"\\\\textrhoticity\"\>"}], ",", 
+   RowBox[{"736", "\[Rule]", "\<\"\\\\super G\"\>"}], ",", 
+   RowBox[{"737", "\[Rule]", "\<\"\\\\super l\"\>"}], ",", 
+   RowBox[{"738", "\[Rule]", "\<\"\\\\super s\"\>"}], ",", 
+   RowBox[{"739", "\[Rule]", "\<\"\\\\super x\"\>"}], ",", 
+   RowBox[{"741", "\[Rule]", "\<\"\\\\tone{55}\"\>"}], ",", 
+   RowBox[{"742", "\[Rule]", "\<\"\\\\tone{44}\"\>"}], ",", 
+   RowBox[{"743", "\[Rule]", "\<\"\\\\tone{33}\"\>"}], ",", 
+   RowBox[{"744", "\[Rule]", "\<\"\\\\tone{22}\"\>"}], ",", 
+   RowBox[{"745", "\[Rule]", "\<\"\\\\tone{11}\"\>"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.868269350792602*^9, 3.868269424802149*^9}, {
+   3.868269590997562*^9, 3.868269646141592*^9}, {3.868269723191293*^9, 
+   3.868269741372573*^9}, {3.868269793969305*^9, 3.8682698099345417`*^9}, 
+   3.86827003700537*^9, {3.8682701135208483`*^9, 3.868270145714527*^9}, 
+   3.868270230590556*^9, 3.868270296524621*^9, 3.868270328122596*^9, 
+   3.868270589364459*^9, {3.8682716047797318`*^9, 3.868271606595924*^9}, 
+   3.868271691887228*^9},
+ CellLabel->
+  "Out[275]=",ExpressionUUID->"02a8eea5-a9ba-4fe8-b5b8-54dcd35153f5"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"StringTemplate", "[", "\"\<{``}\>\"", "]"}], "@", 
+  RowBox[{"StringRiffle", "[", 
+   RowBox[{
+    RowBox[{"Values", "@", "letters"}], ",", "\"\<}{\>\""}], "]"}]}]], "Code",\
+
+ CellChangeTimes->{{3.868269816359788*^9, 3.868269823580185*^9}, {
+  3.868270049531101*^9, 3.868270064762889*^9}, {3.868270097997449*^9, 
+  3.868270098639132*^9}, {3.868270336553166*^9, 3.868270374751295*^9}},
+ CellLabel->
+  "In[216]:=",ExpressionUUID->"418686bf-e827-4bda-b993-7ec96e1bd57b"],
+
+Cell[BoxData["\<\"{5}{A}{6}{\\\\!b}{O}{C}{\\\\:d}{\\\\!d}{9}{@}{\\\\\
+textrhookschwa}{E}{3}{\\\\textrhookrevepsilon}{\\\\textcloserevepsilon}{\\\\\
+textbardotlessj}{\\\\!g}{g}{\\\\;G}{G}{\\\\textramshorns}{4}{H}{\\\\\
+texththeng}{1}{I}{\\\\textltilde}{\\\\textbeltl}{\\\\:l}{\\\\textlyoghlig}{W}{\
+\\\\textturnmrleg}{M}{\\\\textltailn}{\\\\:n}{\\\\;N}{8}{\\\\OE}{F}{\\\\*r}{\\\
+\\textturnlonglegr}{\\\\:R}{\\\\textlonglegr}{\\\\:r}{R}{\\\\;R}{K}{\\\\:s}{S}\
+{\\\\!j}{\\\\textctesh}{\\\\*t}{\\\\:t}{\\\\textbaru}{U}{V}{\\\\textturnv}{\\\
+\\*w}{L}{Y}{\\\\:z}{\\\\textctz}{Z}{\\\\textctyogh}{P}{Q}{\\\\textinvglotstop}\
+{\\\\textstretchc}{\\\\!o}{\\\\;B}{\\\\!G}{\\\\;H}{J}{\\\\*k}{\\\\;L}{\\\\\
+texthtq}{\\\\textbarglotstop}{\\\\textbarrevglotstop}{\\\\textdzlig}{\\\\\
+textdyoghlig}{\\\\textdctzlig}{\\\\texttslig}{\\\\textteshlig}{\\\\\
+texttctclig}{\\\\super h}{\\\\super H}{\\\\super j}{\\\\super \
+r}{\\\\super\\\\*r}{\\\\super\\\\:R}{\\\\super K}{\\\\super w}{\\\\super \
+y}{'}{\\\\textrevapostrophe}{\\\\super P}{\\\\super Q}{\\\"}{\\\"\\\"}{:}{;}{\
+\\\\textrhoticity}{\\\\super G}{\\\\super l}{\\\\super s}{\\\\super x}\"\>"], \
+"Output",
+ CellChangeTimes->{
+  3.868269824713121*^9, {3.868270057305622*^9, 3.868270098857057*^9}, {
+   3.868270333219788*^9, 3.868270341463966*^9}, 3.8682703753826513`*^9, 
+   3.868270591761402*^9},
+ CellLabel->
+  "Out[216]=",ExpressionUUID->"37abc69e-41cb-4eb8-b42b-8cab9be08286"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"combinators", " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"With", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"h", "=", 
+        RowBox[{"head", "|->", 
+         RowBox[{"Switch", "[", 
+          RowBox[{
+          "head", ",", "\"\<L\>\"", ",", "CombineLeft", ",", "\"\<LR\>\"", 
+           ",", "CombineBoth", ",", "_", ",", 
+           RowBox[{"Throw", "@", "#7"}]}], "]"}]}]}], "}"}], ",", "\n", "\t", 
+      
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"#4", "===", "\"\<\>\""}], ",", " ", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"#5", "===", "\"\<\>\""}], ",", " ", "Nothing", ",", " ", 
+          RowBox[{
+           RowBox[{"FromDigits", "@", "#"}], "->", 
+           RowBox[{
+            RowBox[{"h", "[", "#7", "]"}], "@", "#5"}]}]}], "]"}], ",", " ", 
+        RowBox[{
+         RowBox[{"FromDigits", "@", "#"}], "->", 
+         RowBox[{
+          RowBox[{"h", "[", "#7", "]"}], "@", "#4"}]}]}], "]"}]}], "\n", 
+     "]"}], "&"}], "@@@", 
+   RowBox[{"Import", "[", 
+    RowBox[{"\"\<CombiningDiacriticalMarks.tsv\>\"", ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<TSV\>\"", ",", "\"\<RawData\>\""}], "}"}], ",", 
+     RowBox[{"CharacterEncoding", "->", "\"\<UTF8\>\""}]}], "]"}]}]}]], "Code",\
+
+ CellChangeTimes->{{3.868270808601017*^9, 3.86827083228544*^9}, {
+  3.868270869147114*^9, 3.86827089883335*^9}, {3.868270934981846*^9, 
+  3.8682710561976852`*^9}, {3.868271097050169*^9, 3.8682711159942427`*^9}, {
+  3.868271159978649*^9, 3.8682713262194366`*^9}},
+ CellLabel->
+  "In[272]:=",ExpressionUUID->"517ce824-ae95-46b9-8cbf-6d44397c2062"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"768", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\`\"\>", "]"}]}], ",", 
+   RowBox[{"769", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\'\"\>", "]"}]}], ",", 
+   RowBox[{"770", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\^\"\>", "]"}]}], ",", 
+   RowBox[{"771", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\~\"\>", "]"}]}], ",", 
+   RowBox[{"772", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\=\"\>", "]"}]}], ",", 
+   RowBox[{"774", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\u\"\>", "]"}]}], ",", 
+   RowBox[{"775", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\.\"\>", "]"}]}], ",", 
+   RowBox[{"776", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\\\\"\"\>", "]"}]}], ",", 
+   RowBox[{"778", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\r\"\>", "]"}]}], ",", 
+   RowBox[{"779", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\H\"\>", "]"}]}], ",", 
+   RowBox[{"780", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\v\"\>", "]"}]}], ",", 
+   RowBox[{"783", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\H*\"\>", "]"}]}], ",", 
+   RowBox[{"784", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\textdotbreve\"\>", "]"}]}], ",", 
+   RowBox[{"785", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\|c\"\>", "]"}]}], ",", 
+   RowBox[{"790", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\`\"\>", "]"}]}], ",", 
+   RowBox[{"791", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\'\"\>", "]"}]}], ",", 
+   RowBox[{"792", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\|<\"\>", "]"}]}], ",", 
+   RowBox[{"793", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\|>\"\>", "]"}]}], ",", 
+   RowBox[{"794", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\textcorner\"\>", "]"}]}], ",", 
+   RowBox[{"796", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\|(\"\>", "]"}]}], ",", 
+   RowBox[{"797", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\|'\"\>", "]"}]}], ",", 
+   RowBox[{"798", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\|`\"\>", "]"}]}], ",", 
+   RowBox[{"799", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\|+\"\>", "]"}]}], ",", 
+   RowBox[{"800", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\=*\"\>", "]"}]}], ",", 
+   RowBox[{"803", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\.*\"\>", "]"}]}], ",", 
+   RowBox[{"804", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\\\\"*\"\>", "]"}]}], ",", 
+   RowBox[{"805", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\r*\"\>", "]"}]}], ",", 
+   RowBox[{"809", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\s{}\"\>", "]"}]}], ",", 
+   RowBox[{"810", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\|[\"\>", "]"}]}], ",", 
+   RowBox[{"811", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\|w\"\>", "]"}]}], ",", 
+   RowBox[{"812", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\v*\"\>", "]"}]}], ",", 
+   RowBox[{"813", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\^*\"\>", "]"}]}], ",", 
+   RowBox[{"815", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\u*\"\>", "]"}]}], ",", 
+   RowBox[{"816", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\~*\"\>", "]"}]}], ",", 
+   RowBox[{"820", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\|~\"\>", "]"}]}], ",", 
+   RowBox[{"825", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\|)\"\>", "]"}]}], ",", 
+   RowBox[{"826", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\|]\"\>", "]"}]}], ",", 
+   RowBox[{"827", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\textsubsquare\"\>", "]"}]}], ",", 
+   RowBox[{"828", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\|m\"\>", "]"}]}], ",", 
+   RowBox[{"829", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\|x\"\>", "]"}]}], ",", 
+   RowBox[{"838", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\overbridge\"\>", "]"}]}], ",", 
+   RowBox[{"839", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\subdoublebar\"\>", "]"}]}], ",", 
+   RowBox[{"840", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\subdoublevert\"\>", "]"}]}], ",", 
+   RowBox[{"841", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\subcorner\"\>", "]"}]}], ",", 
+   RowBox[{"842", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\crtilde\"\>", "]"}]}], ",", 
+   RowBox[{"843", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\dottedtilde\"\>", "]"}]}], ",", 
+   RowBox[{"844", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\doubletilde\"\>", "]"}]}], ",", 
+   RowBox[{"845", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\spreadlips\"\>", "]"}]}], ",", 
+   RowBox[{"846", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\whistle\"\>", "]"}]}], ",", 
+   RowBox[{"849", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\|(\"\>", "]"}]}], ",", 
+   RowBox[{"852", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\sublptr\"\>", "]"}]}], ",", 
+   RowBox[{"853", "\[Rule]", 
+    RowBox[{"CombineLeft", "[", "\<\"\\\\subrptr\"\>", "]"}]}], ",", 
+   RowBox[{"860", "\[Rule]", 
+    RowBox[{"CombineBoth", "[", "\<\"\\\\t*\"\>", "]"}]}], ",", 
+   RowBox[{"865", "\[Rule]", 
+    RowBox[{"CombineBoth", "[", "\<\"\\\\t\"\>", "]"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.868270809781159*^9, 3.8682708994125566`*^9, {3.868270936708993*^9, 
+   3.86827095596025*^9}, {3.868270999184209*^9, 3.8682710569088783`*^9}, 
+   3.8682711162893467`*^9, {3.868271232044129*^9, 3.868271328063032*^9}, 
+   3.868271611824288*^9},
+ CellLabel->
+  "Out[272]=",ExpressionUUID->"ea1fd9c8-b98a-489c-bb91-fc962b9ac6af"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "test", " ", "=", " ", 
+   "\"\<d\[OTilde]\:02d1\:02e9 \:0283ida\:02d1\:02e5\:02e9 | \:0272e\:02e7 t\
+\:0361s\:02b0\:0289\:02e5 mu\:02d0\:0272i\:02d1\:02e5\:02e9 t\:0361s\:02b0i\
+\:02d1\:02e5\:02e9 \:0294owvis\:02e7 t\:0361s\:02b0\:0289j\:02e7 mowr\:0289\
+\:0303\:02d1\:02e9 le\:02d1\:02e9 dud\:0320\:0361\:0292i\:02d0\:02e7\:02e5 | \
+\:0272i\:02e5 nu\:02d0\:0292e\:02d0\:02e7\:02e5 t\:02b0u\:0292e\:02d0\:02e7\
+\:02e5 t\:0320\:0361\:0283\:02b0i\:02e7 | fi\:0283e\:02d0\:02e7\:02e7 \
+ra\:02d0k\:025bj\:02e5 but\:0320\:0361\:0283i\:02e5 \:0294ub\:02e7 | \
+fi\:0283e\:02d0\:02e7\:02e7 muws\:0289\:02d0\:02e7\:02e5 ra\:02d0k\:025bj\
+\:02e5 \:0272e\:02e5 \:2016\>\""}], ";"}]], "Code",
+ CellChangeTimes->{{3.868271334571501*^9, 3.868271341907655*^9}},
+ CellLabel->
+  "In[252]:=",ExpressionUUID->"00b3c87b-177f-459c-8dd2-430d70417ce8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Catenate", "@", 
+   RowBox[{"ToCharacterCode", "@", 
+    RowBox[{"Characters", "@", "test"}]}]}], "===", 
+  RowBox[{"ToCharacterCode", "@", "test"}]}]], "Code",
+ CellChangeTimes->{{3.868271343385686*^9, 3.868271403536701*^9}},
+ CellLabel->
+  "In[260]:=",ExpressionUUID->"0c6bfdea-3b7a-4772-8f90-9836cfa60dba"],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.8682713599134912`*^9, 3.868271404491198*^9}},
+ CellLabel->
+  "Out[260]=",ExpressionUUID->"19732f82-7b1b-4d25-a268-aebe4b6d6b8c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Replace", "[", 
+   RowBox[{"Join", "[", 
+    RowBox[{"letters", ",", " ", "combinators", ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"s_", ":>", 
+       RowBox[{"FromCharacterCode", "@", "s"}]}], "}"}]}], "]"}], "]"}], "/@", 
+  RowBox[{"ToCharacterCode", "@", "test"}]}]], "Code",
+ CellChangeTimes->{{3.8682714187002296`*^9, 3.868271481364448*^9}},
+ CellLabel->
+  "In[276]:=",ExpressionUUID->"10f154d4-3701-45f5-a43e-9f812ccdb634"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"d\"\>", ",", "\<\"\[OTilde]\"\>", ",", "\<\";\"\>", 
+   ",", "\<\"\\\\tone{11}\"\>", ",", "\<\" \"\>", ",", "\<\"S\"\>", 
+   ",", "\<\"i\"\>", ",", "\<\"d\"\>", ",", "\<\"a\"\>", ",", "\<\";\"\>", 
+   ",", "\<\"\\\\tone{55}\"\>", ",", "\<\"\\\\tone{11}\"\>", ",", "\<\" \"\>",
+    ",", "\<\"|\"\>", ",", "\<\" \"\>", ",", "\<\"\\\\textltailn\"\>", 
+   ",", "\<\"e\"\>", ",", "\<\"\\\\tone{33}\"\>", ",", "\<\" \"\>", 
+   ",", "\<\"t\"\>", ",", 
+   RowBox[{"CombineBoth", "[", "\<\"\\\\t\"\>", "]"}], ",", "\<\"s\"\>", 
+   ",", "\<\"\\\\super h\"\>", ",", "\<\"\\\\textbaru\"\>", 
+   ",", "\<\"\\\\tone{55}\"\>", ",", "\<\" \"\>", ",", "\<\"m\"\>", 
+   ",", "\<\"u\"\>", ",", "\<\":\"\>", ",", "\<\"\\\\textltailn\"\>", 
+   ",", "\<\"i\"\>", ",", "\<\";\"\>", ",", "\<\"\\\\tone{55}\"\>", 
+   ",", "\<\"\\\\tone{11}\"\>", ",", "\<\" \"\>", ",", "\<\"t\"\>", ",", 
+   RowBox[{"CombineBoth", "[", "\<\"\\\\t\"\>", "]"}], ",", "\<\"s\"\>", 
+   ",", "\<\"\\\\super h\"\>", ",", "\<\"i\"\>", ",", "\<\";\"\>", 
+   ",", "\<\"\\\\tone{55}\"\>", ",", "\<\"\\\\tone{11}\"\>", ",", "\<\" \"\>",
+    ",", "\<\"P\"\>", ",", "\<\"o\"\>", ",", "\<\"w\"\>", ",", "\<\"v\"\>", 
+   ",", "\<\"i\"\>", ",", "\<\"s\"\>", ",", "\<\"\\\\tone{33}\"\>", 
+   ",", "\<\" \"\>", ",", "\<\"t\"\>", ",", 
+   RowBox[{"CombineBoth", "[", "\<\"\\\\t\"\>", "]"}], ",", "\<\"s\"\>", 
+   ",", "\<\"\\\\super h\"\>", ",", "\<\"\\\\textbaru\"\>", ",", "\<\"j\"\>", 
+   ",", "\<\"\\\\tone{33}\"\>", ",", "\<\" \"\>", ",", "\<\"m\"\>", 
+   ",", "\<\"o\"\>", ",", "\<\"w\"\>", ",", "\<\"r\"\>", 
+   ",", "\<\"\\\\textbaru\"\>", ",", 
+   RowBox[{"CombineLeft", "[", "\<\"\\\\~\"\>", "]"}], ",", "\<\";\"\>", 
+   ",", "\<\"\\\\tone{11}\"\>", ",", "\<\" \"\>", ",", "\<\"l\"\>", 
+   ",", "\<\"e\"\>", ",", "\<\";\"\>", ",", "\<\"\\\\tone{11}\"\>", 
+   ",", "\<\" \"\>", ",", "\<\"d\"\>", ",", "\<\"u\"\>", ",", "\<\"d\"\>", 
+   ",", 
+   RowBox[{"CombineLeft", "[", "\<\"\\\\=*\"\>", "]"}], ",", 
+   RowBox[{"CombineBoth", "[", "\<\"\\\\t\"\>", "]"}], ",", "\<\"Z\"\>", 
+   ",", "\<\"i\"\>", ",", "\<\":\"\>", ",", "\<\"\\\\tone{33}\"\>", 
+   ",", "\<\"\\\\tone{55}\"\>", ",", "\<\" \"\>", ",", "\<\"|\"\>", 
+   ",", "\<\" \"\>", ",", "\<\"\\\\textltailn\"\>", ",", "\<\"i\"\>", 
+   ",", "\<\"\\\\tone{55}\"\>", ",", "\<\" \"\>", ",", "\<\"n\"\>", 
+   ",", "\<\"u\"\>", ",", "\<\":\"\>", ",", "\<\"Z\"\>", ",", "\<\"e\"\>", 
+   ",", "\<\":\"\>", ",", "\<\"\\\\tone{33}\"\>", ",", "\<\"\\\\tone{55}\"\>",
+    ",", "\<\" \"\>", ",", "\<\"t\"\>", ",", "\<\"\\\\super h\"\>", 
+   ",", "\<\"u\"\>", ",", "\<\"Z\"\>", ",", "\<\"e\"\>", ",", "\<\":\"\>", 
+   ",", "\<\"\\\\tone{33}\"\>", ",", "\<\"\\\\tone{55}\"\>", ",", "\<\" \"\>",
+    ",", "\<\"t\"\>", ",", 
+   RowBox[{"CombineLeft", "[", "\<\"\\\\=*\"\>", "]"}], ",", 
+   RowBox[{"CombineBoth", "[", "\<\"\\\\t\"\>", "]"}], ",", "\<\"S\"\>", 
+   ",", "\<\"\\\\super h\"\>", ",", "\<\"i\"\>", ",", "\<\"\\\\tone{33}\"\>", 
+   ",", "\<\" \"\>", ",", "\<\"|\"\>", ",", "\<\" \"\>", ",", "\<\"f\"\>", 
+   ",", "\<\"i\"\>", ",", "\<\"S\"\>", ",", "\<\"e\"\>", ",", "\<\":\"\>", 
+   ",", "\<\"\\\\tone{33}\"\>", ",", "\<\"\\\\tone{33}\"\>", ",", "\<\" \"\>",
+    ",", "\<\"r\"\>", ",", "\<\"a\"\>", ",", "\<\":\"\>", ",", "\<\"k\"\>", 
+   ",", "\<\"E\"\>", ",", "\<\"j\"\>", ",", "\<\"\\\\tone{55}\"\>", 
+   ",", "\<\" \"\>", ",", "\<\"b\"\>", ",", "\<\"u\"\>", ",", "\<\"t\"\>", 
+   ",", 
+   RowBox[{"CombineLeft", "[", "\<\"\\\\=*\"\>", "]"}], ",", 
+   RowBox[{"CombineBoth", "[", "\<\"\\\\t\"\>", "]"}], ",", "\<\"S\"\>", 
+   ",", "\<\"i\"\>", ",", "\<\"\\\\tone{55}\"\>", ",", "\<\" \"\>", 
+   ",", "\<\"P\"\>", ",", "\<\"u\"\>", ",", "\<\"b\"\>", 
+   ",", "\<\"\\\\tone{33}\"\>", ",", "\<\" \"\>", ",", "\<\"|\"\>", 
+   ",", "\<\" \"\>", ",", "\<\"f\"\>", ",", "\<\"i\"\>", ",", "\<\"S\"\>", 
+   ",", "\<\"e\"\>", ",", "\<\":\"\>", ",", "\<\"\\\\tone{33}\"\>", 
+   ",", "\<\"\\\\tone{33}\"\>", ",", "\<\" \"\>", ",", "\<\"m\"\>", 
+   ",", "\<\"u\"\>", ",", "\<\"w\"\>", ",", "\<\"s\"\>", 
+   ",", "\<\"\\\\textbaru\"\>", ",", "\<\":\"\>", ",", "\<\"\\\\tone{33}\"\>",
+    ",", "\<\"\\\\tone{55}\"\>", ",", "\<\" \"\>", ",", "\<\"r\"\>", 
+   ",", "\<\"a\"\>", ",", "\<\":\"\>", ",", "\<\"k\"\>", ",", "\<\"E\"\>", 
+   ",", "\<\"j\"\>", ",", "\<\"\\\\tone{55}\"\>", ",", "\<\" \"\>", 
+   ",", "\<\"\\\\textltailn\"\>", ",", "\<\"e\"\>", 
+   ",", "\<\"\\\\tone{55}\"\>", ",", "\<\" \"\>", ",", "\<\"\:2016\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.868271398336316*^9, 3.868271481592554*^9}, 
+   3.868271619992797*^9, 3.868271695437261*^9},
+ CellLabel->
+  "Out[276]=",ExpressionUUID->"418f8ece-d416-4c0e-a1e6-972dc3b53ef0"]
+}, Open  ]],
+
+Cell["\<\
+We need annotate letters and marks for determine combinator boundary.\
+\>", "Text",
+ CellChangeTimes->{{3.86827172960846*^9, 
+  3.868271769503264*^9}},ExpressionUUID->"8c3408cf-831f-40ba-a592-\
+f61164ece485"]
+},
+WindowSize->{1152., 595.5},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+TaggingRules-><|"CodeFormatter" -> <|"ToolbarState" -> False|>|>,
+SpellingDictionaries->{"CorrectWords"->{
+ "\[CloseCurlyQuote]b\[CloseCurlyQuote]"}},
+FrontEndVersion->"13.1 for Linux x86 (64-bit) (2022\:5e746\:670816\:65e5)",
+StyleDefinitions->"Package.nb",
+ExpressionUUID->"7b8715d5-6f4a-45fe-947a-758cd9e25078"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 243, 4, 45, "Code",ExpressionUUID->"627f2ab0-9582-40be-aa9f-6fff963a73ce"],
+Cell[826, 28, 220, 3, 30, "Output",ExpressionUUID->"c661f1fb-0638-48cd-a9d8-457d9fedd6da"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1083, 36, 1355, 33, 75, "Code",ExpressionUUID->"e99f7725-4311-4479-a35b-44d7375b82a1"],
+Cell[2441, 71, 7163, 128, 386, "Output",ExpressionUUID->"02a8eea5-a9ba-4fe8-b5b8-54dcd35153f5"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[9641, 204, 503, 11, 44, "Code",ExpressionUUID->"418686bf-e827-4bda-b993-7ec96e1bd57b"],
+Cell[10147, 217, 1418, 21, 203, "Output",ExpressionUUID->"37abc69e-41cb-4eb8-b42b-8cab9be08286"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11602, 243, 1630, 41, 103, "Code",ExpressionUUID->"517ce824-ae95-46b9-8cbf-6d44397c2062"],
+Cell[13235, 286, 5636, 117, 327, "Output",ExpressionUUID->"ea1fd9c8-b98a-489c-bb91-fc962b9ac6af"]
+}, Open  ]],
+Cell[18886, 406, 867, 15, 48, "Code",ExpressionUUID->"00b3c87b-177f-459c-8dd2-430d70417ce8"],
+Cell[CellGroupData[{
+Cell[19778, 425, 344, 8, 45, "Code",ExpressionUUID->"0c6bfdea-3b7a-4772-8f90-9836cfa60dba"],
+Cell[20125, 435, 182, 3, 48, "Output",ExpressionUUID->"19732f82-7b1b-4d25-a268-aebe4b6d6b8c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20344, 443, 466, 11, 48, "Code",ExpressionUUID->"10f154d4-3701-45f5-a43e-9f812ccdb634"],
+Cell[20813, 456, 4675, 72, 264, "Output",ExpressionUUID->"418f8ece-d416-4c0e-a1e6-972dc3b53ef0"]
+}, Open  ]],
+Cell[25503, 531, 218, 5, 43, "Text",ExpressionUUID->"8c3408cf-831f-40ba-a592-f61164ece485"]
+}
+]
+*)
+

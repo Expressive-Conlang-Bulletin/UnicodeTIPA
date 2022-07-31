@@ -1,0 +1,80 @@
+688	ʰ	aspirated	\super h	\textsuperscript{h}	
+689	ʱ	breathy-voice-aspirated	\super H	\textsuperscript{H}	
+690	ʲ	palatalized	\super j	\textsuperscript{j}	
+691	ʳ		\super r	\textsuperscript{r}	
+692	ʴ	rhotacized	\super{\*r}	\textsuperscript{\textturnr}	
+693	ʵ		\super{\:R}		
+694	ʶ		\super K		
+695	ʷ	labialized	\super w	\textsuperscript{w}	
+696	ʸ		\super y		
+697	ʹ				?
+698	ʺ				?
+699	ʻ				?
+700	ʼ	ejective	'		
+701	ʽ	week aspiration		\textrevapostrophe	O
+702	ʾ			\textsuperscript{\textsubrhalfring{}}	?
+703	ʿ			\textsuperscript{\textsublhalfring{}}	?
+704	ˀ		\super P		
+705	ˁ	pharyngealized	\super Q	\textsuperscript{\textrevglotstop}	
+706	˂				M
+707	˃				M
+708	˄				M
+709	˅				M
+710	ˆ				M
+711	ˇ				M
+712	ˈ	(primary) stress mark	""""	\textprimstress	
+713	ˉ				M
+714	ˊ				M
+715	ˋ				M
+716	ˌ	secondary stress	""""""	\textsecstress	
+717	ˍ				M
+718	ˎ				M
+719	ˏ				M
+720	ː	length mark	:		
+721	ˑ	half-length	;		
+722	˒				M
+723	˓				M
+724	˔				M
+725	˕				M
+726	˖				M
+727	˗				M
+728	˘				M
+729	˙				M
+730	˚				M
+731	˛				M
+732	˜				M
+733	˝				M
+734	˞	rhotacized		\textrhoticity	
+735	˟				M
+736	ˠ	velarized	\super G	\textsuperscript{\textgamma}	
+737	ˡ		\super l		
+738	ˢ		\super s		
+739	ˣ		\super x		
+740	ˤ				M
+741	˥			\tone{55}	
+742	˦			\tone{44}	
+743	˧			\tone{33}	
+744	˨			\tone{22}	
+745	˩			\tone{11}	
+746	˪				M
+747	˫				M
+748	ˬ				M
+749	˭				M
+750	ˮ				M
+751	˯				M
+752	˰				M
+753	˱				M
+754	˲				M
+755	˳				M
+756	˴				M
+757	˵				M
+758	˶				M
+759	˷				M
+760	˸				M
+761	˹				M
+762	˺				M
+763	˻				M
+764	˼				M
+765	˽				M
+766	˾				M
+767	˿				M

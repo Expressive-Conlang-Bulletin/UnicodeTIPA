@@ -1,0 +1,96 @@
+592	ɐ	open-mid schwa	5		
+593	ɑ	open back unrounded	A		
+594	ɒ	open back rounded	6		
+595	ɓ	vl bilabial implosive	\!b		
+596	ɔ	open-mid back rounded	O		
+597	ɕ	vl alveolopalatal fricative	C		
+598	ɖ	vd retroflex plosive	\:d		
+599	ɗ	vl alveolar implosive	\!d		
+600	ɘ	close-mid schwa	9		
+601	ə	schwa	@		
+602	ɚ	rhotacized schwa		\textrhookschwa	
+603	ɛ	open-mid front unrounded	E		
+604	ɜ	open-mid central	3		
+605	ɝ	rhotacized open-mid central		\textrhookrevepsilon	
+606	ɞ	open-mid central rounded		\textcloserevepsilon	
+607	ɟ	vd palatal plosive		\textbardotlessj	
+608	ɠ	vl velar implosive	\!g		
+609	ɡ	vd velar plosive	g		
+610	ɢ	vd uvular plosive	\;G		
+611	ɣ	vd velar fricative	G		
+612	ɤ	close-mid back unrounded		\textramshorns	
+613	ɥ	labial-palatal approximant	4		
+614	ɦ	vd glottal fricative	H		
+615	ɧ	vl multiple-place fricative		\texththeng	
+616	ɨ	close central unrounded	1		
+617	ɩ				O
+618	ɪ	lax close front unrounded	I		
+619	ɫ	velarized vl alveolar lateral		\textltilde	
+620	ɬ	vl alveolar lateral fricative		\textbeltl	
+621	ɭ	vd retroflex lateral approximant	\:l		
+622	ɮ	vd alveolar lateral fricative		\textlyoghlig	
+623	ɯ	close back unrounded	W		
+624	ɰ	vd velar approximant		\textturnmrleg	
+625	ɱ	vl labiodental nasal	M		
+626	ɲ	vl palatal nasal		\textltailn	
+627	ɳ	vl retroflex nasal	\:n		
+628	ɴ	vl uvular nasal	\;N		
+629	ɵ	rounded schwa	8		
+630	ɶ	front open rounded	\OE		
+631	ɷ				O
+632	ɸ	vl bilabial fricative	F		
+633	ɹ	vd (post)alveolar approximant	\*r		
+634	ɺ	vl alveolar lateral flap		\textturnlonglegr	
+635	ɻ	vd retroflex approximant	\:R		
+636	ɼ	alveolar fricative trill		\textlonglegr	
+637	ɽ	vl retroflex flap	\:r		
+638	ɾ	vl alveolar tap	R		
+639	ɿ				N
+640	ʀ	vl uvular trill	\;R		
+641	ʁ	vd uvular fricative	K		
+642	ʂ	vl retroflex fricative	\:s		
+643	ʃ	vl postalveolar fricative	S		
+644	ʄ	vl palatal implosive	\!j		
+645	ʅ				N
+646	ʆ	palatalized S		\textctesh	
+647	ʇ	dental click	\*t	\textturnt	
+648	ʈ	vl retroflex plosive	\:t		
+649	ʉ	close central rounded		\textbaru	
+650	ʊ	lax close back rounded	U		
+651	ʋ	vd labiodental approximant	V		
+652	ʌ	open-mid back unrounded		\textturnv	
+653	ʍ	vl labial-velar fricative	\*w		
+654	ʎ	vd palatal lateral approximant	L		
+655	ʏ	lax close front rounded	Y		
+656	ʐ	vd retroflex fricative	\:z		
+657	ʑ	vl alveolopalatal fricative		\textctz	
+658	ʒ	vd postalveolar fricative	Z		
+659	ʓ	palatalized Z		\textctyogh	O
+660	ʔ	glottal plosive	P		
+661	ʕ	vd pharyngeal fricative	Q		
+662	ʖ	alveolar lateral click		\textinvglotstop	O
+663	ʗ	Postalveolar click		\textstretchc	O
+664	ʘ	bilabial click	\!o		
+665	ʙ	vd bilabial trill	\;B		
+666	ʚ				O
+667	ʛ	vl uvular implosive	\!G		
+668	ʜ	vl epiglottal fricative	\;H		
+669	ʝ	vd palatal fricative	J		
+670	ʞ	Velar click	\*k	\textturnk	O
+671	ʟ	vd velar lateral approximant	\;L		
+672	ʠ	voiceless uvular implosive		\texthtq	O
+673	ʡ	vl epiglottal plosive		\textbarglotstop	
+674	ʢ	vl epiglottal fricative		\textbarrevglotstop	
+675	ʣ	Voiced alveolar affricate		\textdzlig	O
+676	ʤ	vd postalveolar affricate		\textdyoghlig	O
+677	ʥ	Voiced alveolo-palatal affricate		\textdctzlig	O
+678	ʦ	Voiceless alveolar affricate		\texttslig	O
+679	ʧ	vl postalveolar affricate		\textteshlig	O
+680	ʨ	Voiceless alveolo-palatal affricate		\texttctclig	O
+681	ʩ				M
+682	ʪ				M
+683	ʫ				M
+684	ʬ				M
+685	ʭ				?
+686	ʮ				M
+687	ʯ				M
