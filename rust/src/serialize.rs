@@ -33,7 +33,13 @@ impl TokenSequence {
 	pub fn to_string(self, conf: &Config) -> String {
 		match &conf.cat {
 			Bracket => {
-				unimplemented!()
+				let mut s = String::from("{");
+				for t in self.0 {
+					s.push_str(&t.to_string(conf));
+					s.push_str("}{")
+				};
+				s.push_str("}");
+				s
 			},
 			Space => {
 				unimplemented!()
