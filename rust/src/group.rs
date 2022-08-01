@@ -21,8 +21,10 @@ pub fn replace_groups(mut tokens: Vec<Token>, dict: &Map<String, Value>) -> Vec<
 			None => {},
 			Some(res) => {
 				let len = key.len();
-				tokensref.drain(res..res+len).last();
-				tokensref.insert(res, parse_group_val(v.as_str().unwrap()))
+				let val = parse_group_val(v.as_str().unwrap());
+				// tokensref.drain(res..res+len).last();
+				// tokensref.insert(res, val)
+				tokensref.splice(res..res+len, [val]).last();
 			}
 		};
 	};
