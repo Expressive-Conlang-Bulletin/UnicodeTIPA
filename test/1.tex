@@ -1,5 +1,7 @@
 \documentclass{memoir}
 \usepackage[extra,tone]{tipa}
+\usepackage{fontspec}
+\newfontfamily\cmu{CMU Serif}
 \begin{document}
 	\HUGE \textipa{
 		{5}{A}{6}{\!b}{O}{C}{\:d}{\!d}{9}{@}{\textrhookschwa}{E}{3}\\
@@ -11,6 +13,12 @@
 		{J}{\*k}{\;L}{\texthtq}{\textbarglotstop}{\textbarrevglotstop}{\textdzlig}{\textdyoghlig}{\textdctzlig}\\
 		{\texttslig}{\textteshlig}{\texttctclig}{\super h}{\super H}{\super j}{\super r}{\super{\*r}}{\super{\:R}}\\
 		{\super K}{\super w}{\super y}{'}{\textrevapostrophe}{\super P}{\super Q}{"}{""}{:}{;}{\textrhoticity}\\
-		{\super G}{\super l}{\super s}{\super x}
-	}
+		{\super G}{\super l}{\super s}{\super x}\*f\t*{}ab\textsubrightarrow{ab}\\
+		v\hspace{-.25em}\raisebox{-0.2em}\texthooktop\\
+		V\hspace{-.2em}\raisebox{-0.2em}\texthooktop\\
+		{\|~l}\textltilde
+	}\\
+	\textipa{\|~l}\\
+	{\cmu ⱱ}
+
 \end{document}

@@ -1,0 +1,20 @@
+230	æ	near-open front unrounded vowel		\ae 		Latin-1 Supplement
+231	ç	voiceless palatal fricative	\c{c}			Latin-1 Supplement
+240	ð	voiced dental fricative	D	\dh		Latin-1 Supplement
+248	ø	close-mid front rounded vowel		\o		Latin-1 Supplement
+254	þ	*interdental fricative	\th	\textthorn		Latin-1 Supplement
+295	ħ	voiceless pharyngeal fricative		\textcrh		Latin Extended-A
+331	ŋ	velar nasal	N	\ng		Latin Extended-A
+339	œ	open-mid front rounded vowel		\oe		Latin Extended-A
+426	ƪ	labialized voiceless postalveolar fricative(obsolete)		\textlooptoprevesh	O	Latin Extended-B
+441	ƛ	Crossed lambda		\textcrlambda	O	Latin Extended-B
+447	ƿ	*labiovelar approximant		\textwynn	NS	Latin Extended-B
+448	ǀ	dental click	|	\textpipe		Latin Extended-B
+449	ǁ	alveolar lateral click	||	\textdoublepipe		Latin Extended-B
+450	ǂ	palatoalveolar click		\textdoublebarpipe		Latin Extended-B
+451	ǃ	(post)alveolar click	!			Latin Extended-B
+545	ȡ	*voiced alveolo-palatal plosive		\textctd		Latin Extended-B
+564	ȴ	Voiced palatal lateral approximant				Latin Extended-B
+565	ȵ	*alveolo-palatal nasal		\textctn		Latin Extended-B
+566	ȶ	*voiceless alveolo-palatal plosive		\textctt		Latin Extended-B
+11377	ⱱ				M	Latin Extended-C

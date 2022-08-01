@@ -34,17 +34,17 @@
 801	̡				?	L
 802	̢				?	L
 803	̣	*retroflex	\.*	\textsubdot		L
-804	̤	breathy voiced	"\""*"			L
-805	̥	voiceless	\r*			L
+804	̤	breathy voiced	"\""*"	\textsubumlaut		L
+805	̥	voiceless	\r*	\textsubring		L
 806	̦				M	
 807	̧				M	
 808	̨				M	
-809	̩	syllabic	\s{}			L
-810	̪	dental	\|[			L
+809	̩	syllabic	\s	\textsyllabic		L
+810	̪	dental	\|[	\textsubbridge		L
 811	̫	labialized	\|w	\textsubw	O	L
-812	̬	voiced	\v*			L
+812	̬	voiced	\v*	\textsubwedge		L
 813	̭		\^*	\textsubcircum		L
-814	̮					L
+814	̮				N	L
 815	̯	non-syllabic	\u*	\textsubarch		L
 816	̰	creaky voiced	\~*			L
 817	̱				M	
@@ -55,11 +55,11 @@
 822	̶				M	
 823	̷				M	
 824	̸				M	
-825	̹	more rounded	\|)			L
-826	̺	apical	\|]			L
-827	̻	laminal		\textsubsquare		L
-828	̼	linguolabial	\|m			L
-829	̽	mid-centralized	\|x			L
+825	̹	more rounded	\|)	\textsubrhalfring		L
+826	̺	apical	\|]	\textinvsubbridge		L
+827	̻	laminal		\textsubsquare	E	L
+828	̼	linguolabial	\|m	\textseagull		L
+829	̽	mid-centralized	\|x	\textovercross		L
 830	̾					L
 831	̿					L
 832	̀					L
@@ -75,15 +75,15 @@
 842	͊	*denasal		\crtilde		L
 843	͋	*nasal escape		\dottedtilde		L
 844	͌	*velopharyngeal friction		\doubletilde		L
-845	͍	*labial spreading		\spreadlips		L
+845	͍	*labial spreading		\spreadlips	E	L
 846	͎	*whistled articulation		\whistle		L
 847	͏				M	L
 848	͐				M	L
 849	͑		\|(	\textsublhalfring		L
 850	͒				M	L
 851	͓				M	L
-852	͔	*right offset jaw voice		\sublptr		L
-853	͕	*left offset jaw voice		\subrptr		L
+852	͔	*right offset jaw voice		\sublptr	E	L
+853	͕	*left offset jaw voice		\subrptr	E	L
 854	͖				M	
 855	͗				M	
 856	͘				N	
@@ -96,7 +96,7 @@
 863	͟				M	
 864	͠				M	
 865	͡	tie bar above	\t			LR
-866	͢				M	
+866	͢	sliding articulation		\sliding	E	LR
 867	ͣ				M	
 868	ͤ				M	
 869	ͥ				M	
