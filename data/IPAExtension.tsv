@@ -55,10 +55,10 @@
 646	ʆ	palatalized S		\textctesh	
 647	ʇ	dental click	\*t	\textturnt	
 648	ʈ	vl retroflex plosive	\:t	\textrtailt	
-649	ʉ	close central rounded		\textbaru	
+649	ʉ	close central rounded	0	\textbaru	
 650	ʊ	lax close back rounded	U	\textupsilon	
 651	ʋ	vd labiodental approximant	V	\textscriptv	
-652	ʌ	open-mid back unrounded		\textturnv	
+652	ʌ	open-mid back unrounded	2	\textturnv	
 653	ʍ	vl labial-velar fricative	\*w	\textturnw	
 654	ʎ	vd palatal lateral approximant	L	\textturny	
 655	ʏ	lax close front rounded	Y	\textscy	
