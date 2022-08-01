@@ -2,6 +2,7 @@ use crate::kmp::kmp_find;
 use crate::serde_json::{Map, Value};
 use crate::tokenize::{Token, Token::*};
 
+// we should allow `known` tokens appear in group. Or replace groups before tokenize.
 fn parse_group_key(str: &String) -> Vec<Token> {
 	str.split(',').map(|s| Unknown(s.parse::<u32>().unwrap())).collect()
 }

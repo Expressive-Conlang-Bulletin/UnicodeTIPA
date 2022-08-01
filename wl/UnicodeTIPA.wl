@@ -46,9 +46,6 @@ If[$Notebooks,
 ApplyMacro[cs_][content_] := cs<>"{"<>content<>"}"
 
 
-StringMatchQ[LetterCharacter]@";"
-
-
 (* not so reliable *)
 `$CSNamePattern = LetterCharacter|"@";
 `$CSNameDelimiterPattern = Alternatives@@Characters@"{ }";
