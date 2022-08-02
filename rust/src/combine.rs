@@ -1,6 +1,7 @@
 use crate::tokenize::{Token, Token::*, TokenSequence};
 use CombineStatus::*;
 
+#[derive(Debug)]
 enum CombineStatus {
 	Relax,
 	WaitingCombinator,
@@ -10,6 +11,7 @@ enum CombineStatus {
 pub fn combine_tokens(tokens: Vec<Token>) -> Vec<Token> {
 	let mut relax_stack: Vec<Token> = Vec::new();
 	let mut combine_stack: Vec<Token> = Vec::new();
+	// We need None here in fact, but let it go.
 	let mut current_combinator: Token = Unknown(0);
 	let mut status: CombineStatus = Relax;
 	for token in tokens {
@@ -26,16 +28,16 @@ pub fn combine_tokens(tokens: Vec<Token>) -> Vec<Token> {
 					},
 					CombiningRight => {
 						combine_stack.push(token);
-						let seq = combine_stack.clone();
+						let mut seq = Vec::new();
 						match current_combinator.clone() {
 							CombineLeft(c)|CombineBoth(c) => {
-								relax_stack.push(AppliedMacro(c, TokenSequence(seq)));
-								combine_stack.clear();
+								seq.append(&mut combine_stack);
+								combine_stack.push(AppliedMacro(c, TokenSequence(seq)));
 								current_combinator = Unknown(0)
 							},
-							_ => unreachable!("Variable `current_combinator` is not a combinator token.")
+							_ => unreachable!("`Status` is `CombiningRight`, but `current_combinator` is not a combinator token.")
 						};
-						status = Relax
+						status = WaitingCombinator
 					}
 				}
 			},
@@ -54,22 +56,25 @@ pub fn combine_tokens(tokens: Vec<Token>) -> Vec<Token> {
 					}
 				}
 			},
-			CombineLeft(_) => {
+			CombineLeft(c) => {
 				match status {
 					Relax => {
 						unreachable!("Found `CombineLeft` not behind any letters. Cannot Combine.")
 					},
 					WaitingCombinator => {
-						let seq = combine_stack.clone();
+						let mut seq = Vec::new();
 						match current_combinator.clone() {
-							CombineLeft(c)|CombineBoth(c) => {
-								relax_stack.push(AppliedMacro(c, TokenSequence(seq)));
-								combine_stack.clear();
-								current_combinator = Unknown(0)
+							CombineLeft(_)|CombineBoth(_) => {
+								unreachable!("Another combinator found when `current_combinator` is a valid combinator token.")
 							},
-							_ => unreachable!("Variable `current_combinator` is not a combinator token.")
+							_ => {
+								seq.append(&mut combine_stack);
+								let applied = AppliedMacro(c, TokenSequence(seq));
+								combine_stack.push(applied);
+								current_combinator = Unknown(0)
+							}
 						};
-						status = Relax
+						status = WaitingCombinator
 					},
 					CombiningRight => {
 						unreachable!("Found `CombineBoth` not behind any letters. Cannot Combine.")

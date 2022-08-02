@@ -31,9 +31,9 @@ pub fn tokenize(t: Token
 	, comblr_map: &Map<String, Value>
 ) -> Token {
 	match t {
-		Unknown(32) => Mark(String::from("\\,")),
-		Unknown(10) => Mark(String::from("\\\\")),
-		Unknown(9) => Mark(String::from("\\quad")),
+		Unknown(32) => Mark(String::from("\\, ")),
+		Unknown(10) => Mark(String::from("\\\\ ")),
+		Unknown(9) => Mark(String::from("\\quad ")),
 		Unknown(126) => Mark(String::from("\\textasciitilde")),
 		// in principle, these two should not appear except small a~z. I'm lazy to support them.
 		Unknown(l)
@@ -48,16 +48,20 @@ pub fn tokenize(t: Token
 		Unknown(744) => Tone(TONE2),
 		Unknown(745) => Tone(TONE1),
 		Unknown(u) => {
-			let key = char::try_from(u).unwrap().to_string();
+			let key = u.to_string();
 			match letter_map.get(&key) {
-				Some(s) => Letter(s.as_str().unwrap().to_owned()),
-				None => match mark_map.get(&key) {
-					Some(s) => Mark(s.as_str().unwrap().to_owned()),
-					None => match combl_map.get(&key) {
-						Some(s) => CombineLeft(s.as_str().unwrap().to_owned()),
-						None => match comblr_map.get(&key) {
-							Some(s) => CombineBoth(s.as_str().unwrap().to_owned()),
-							None => t
+				Some(s) => {
+					Letter(s.as_str().unwrap().to_owned())
+				},
+				None => {
+					match mark_map.get(&key) {
+						Some(s) => Mark(s.as_str().unwrap().to_owned()),
+						None => match combl_map.get(&key) {
+							Some(s) => CombineLeft(s.as_str().unwrap().to_owned()),
+							None => match comblr_map.get(&key) {
+								Some(s) => CombineBoth(s.as_str().unwrap().to_owned()),
+								None => t
+							}
 						}
 					}
 				}
@@ -77,7 +81,7 @@ pub fn tokenize_str(str: String) -> Vec<Token> {
 		.collect()
 }
 
-pub fn tokenize_all_str(str: String) -> Vec<Token> {
+pub fn tokenize_withgrp_str(str: String) -> Vec<Token> {
 	let l = &read_letters();
 	let m = &read_marks();
 	let cl = &read_combineleft();

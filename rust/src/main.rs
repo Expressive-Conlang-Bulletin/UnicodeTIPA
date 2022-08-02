@@ -1,10 +1,15 @@
 extern crate serde_json;
 extern crate kmp;
+extern crate regex;
+extern crate clap;
 
-use data::read_groups;
-use tokenize::TokenSequence;
+use tokenize::{TokenSequence, tokenize_withgrp_str};
+use tone::replace_tone;
+use combine::combine_tokens;
 use CatenateMethod::*;
 use ToneMethod::*;
+
+use clap::{Parser, ValueEnum};
 
 mod data;
 mod tokenize;
@@ -13,42 +18,48 @@ mod group;
 mod combine;
 mod serialize;
 
+#[derive(Parser)]
+#[clap(author, version, about, long_about = None)]
+struct Cli {
+    #[clap(short, long, arg_enum, default_value_t = LessSpace)]
+    cat: CatenateMethod,
+    #[clap(short, long, arg_enum, default_value_t = Ligature)]
+    tone: ToneMethod,
+    input: String
+}
+
 pub struct Config {
     tone: ToneMethod,
-    cat: CatenateMethod,
-    unknown: ()
+    cat: CatenateMethod
+    //, unknown: UnknownHandle
 }
 
+pub enum UnknownHandle {
+    NotImplemented
+}
+
+#[derive(Clone, ValueEnum)]
 pub enum CatenateMethod {
     Bracket,
-    Space
+    Space,
+    LessSpace
 }
 
+#[derive(Clone, ValueEnum)]
 pub enum ToneMethod {
     Ligature,
     Catenate,
     Keep
 }
 
-mod tests{
-    
-}
-
 fn main() {
-	let str = String::from("ã [aˑ˩˩]");
-    let str2 = String::from("1l̴3");
-    let str3 = String::from("dõˑ˩ ʃidaˑ˥˩ | ɲe˧ t͡sʰʉ˥ muːɲiˑ˥˩ t͡sʰiˑ˥˩ ʔowvis˧ t͡sʰʉj˧ mowrʉ̃ˑ˩ leˑ˩ dud̠͡ʒiː˧˥ | ɲi˥ nuːʒeː˧˥ tʰuʒeː˧˥ t̠͡ʃʰi˧ | fiʃeː˧˧ raːkɛj˥ but̠͡ʃi˥ ʔub˧ | fiʃeː˧˧ muwsʉː˧˥ raːkɛj˥ ɲe˥ ‖");
-    for u in str.chars().map(|c| c as u32){
-        println!("{u:?}");
-    }
-    println!("{:#?}", data::read_combineboth());
-    println!("{:#?}", tone::replace_tone(tokenize::tokenize_str(str), ToneMethod::Ligature));
-    println!("{:#?}", group::replace_groups(tokenize::tokenize_str(str2.clone()), &read_groups()));
-    println!("{:#?}", combine::combine_tokens(group::replace_groups(tokenize::tokenize_str(str2.clone()), &read_groups())));
-    println!("{:#?}", tokenize::tokenize_all_str(str2.clone()));
-    let conf = Config {tone: Ligature, cat: Bracket, unknown: ()};
-    let last = TokenSequence(tokenize::tokenize_all_str(str3)).to_string(&conf);
-    println!("{last}");
-    //seems there's a line break after each input
-    //TODO: call tone, combine
+    let cli = Cli::parse();
+    let input = cli.input;
+    let conf = Config {tone: cli.tone, cat: cli.cat};
+    let tokens = tokenize_withgrp_str(input);
+    let tone_replaced = replace_tone(tokens, &conf);
+    let combined = combine_tokens(tone_replaced);
+    let res = TokenSequence(combined).to_string(&conf);
+    println!("{res}");
 }
+//they should be methods of TokenSeq?

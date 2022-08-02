@@ -1,11 +1,11 @@
-use crate::{ToneMethod, ToneMethod::*, tokenize::{Token, Token::*}};
+use crate::{ToneMethod::*, tokenize::{Token, Token::*}};
 
 // May be good to restart `LongTone' as `Tone not stringfied' and stringfy it in a future stage.
 
-pub fn replace_tone(tokens: Vec<Token>, tone_conf: ToneMethod) -> Vec<Token> {
+pub fn replace_tone(tokens: Vec<Token>, conf: &crate::Config) -> Vec<Token> {
 	let mut vec = Vec::new();
 	let v = &mut vec;
-	match tone_conf {
+	match conf.tone {
 		Ligature => {
 			let mut mem: Vec<&str> = Vec::new();
 			for token in tokens {
