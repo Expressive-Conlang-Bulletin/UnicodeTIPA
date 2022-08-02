@@ -92,7 +92,7 @@ pub fn combine_tokens(tokens: Vec<Token>) -> Vec<Token> {
 				}
 			},
 			Unknown(u) => {
-				println!("Not implemented. Skip unknown tokwn {u}")
+				eprintln!("Not implemented. Skip unknown tokwn {u}")
 			}
 		};
 	};

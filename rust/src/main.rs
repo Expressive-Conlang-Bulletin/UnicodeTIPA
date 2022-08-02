@@ -65,12 +65,13 @@ fn main() {
     let conf = Config {tone: cli.tone, cat: cli.cat};
     let tokens = tokenize_withgrp_str(input);
     let tone_replaced = replace_tone(tokens, &conf);
+    // println!("{tone_replaced:?}");
     let combined = combine_tokens(tone_replaced);
     let res = TokenSequence(combined).to_string(&conf);
     if cli.copy {
         copy::copy_to_clipboard(res, &cli.sleep)
     } else {
-        println!("{res}")
+        println!("{res}");
     }
 }
 //they should be methods of TokenSeq?

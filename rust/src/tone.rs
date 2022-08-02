@@ -12,10 +12,10 @@ pub fn replace_tone(tokens: Vec<Token>, conf: &crate::Config) -> Vec<Token> {
 				match token {
 					Tone(t) => {mem.push(t)},
 					t => {
-						let mut long_tone = String::from("\\tone{");
 						match mem.len() {
 							0 => {},
 							1 => {
+								let mut long_tone = String::from("\\tone{");
 								for c in &mem {
 									long_tone.push_str(c);
 								};
@@ -26,6 +26,7 @@ pub fn replace_tone(tokens: Vec<Token>, conf: &crate::Config) -> Vec<Token> {
 								v.push(Mark(long_tone));
 							},
 							_ => {
+								let mut long_tone = String::from("\\tone{");
 								for c in &mem {
 									long_tone.push_str(c);
 								};
@@ -37,7 +38,31 @@ pub fn replace_tone(tokens: Vec<Token>, conf: &crate::Config) -> Vec<Token> {
 						v.push(t)
 					}
 				};
-			}
+			};
+			//maybe oneday reduce the repeated codes
+			match mem.len() {
+				0 => {},
+				1 => {
+					let mut long_tone = String::from("\\tone{");
+					for c in &mem {
+						long_tone.push_str(c);
+					};
+					let uniq = mem.get(0).unwrap();
+					long_tone.push_str(uniq);
+					long_tone.push('}');
+					mem.clear();
+					v.push(Mark(long_tone));
+				},
+				_ => {
+					let mut long_tone = String::from("\\tone{");
+					for c in &mem {
+						long_tone.push_str(c);
+					};
+					mem.clear();
+					long_tone.push('}');
+					v.push(Mark(long_tone));
+				}
+			};
 		},
 		Catenate => {
 			let mut mem: Vec<&str> = Vec::new();
@@ -56,7 +81,8 @@ pub fn replace_tone(tokens: Vec<Token>, conf: &crate::Config) -> Vec<Token> {
 						v.push(t)
 					}
 				};
-			}
+			};
+			
 		},
 		Keep => {
 			for token in tokens {
