@@ -76,7 +76,7 @@ fn to_string_less_space(tokens: Vec<Token>, conf: &Config) -> String {
 
 fn is_waiting_for_csname(s: &String) -> bool {
 	// pattern should be determined by TeX category codes(which may change), but let it go.
-	let re = Regex::new(".*\\\\[^\\\\\\{\\s},;:]+").unwrap();
+	let re = Regex::new("^.*\\\\[^\\\\\\{\\s},;:]*$").unwrap();
 	let res = re.is_match(s);
 	// println!("{s}\n waiting csname? {res}");
 	res
@@ -85,6 +85,8 @@ fn is_waiting_for_csname(s: &String) -> bool {
 fn is_start_from_csname(s: &String) -> bool {
 	// pattern should be determined by TeX category codes(which may change), but let it go.
 	// not support chinese char
-	let re = Regex::new("\\p{L}.*").unwrap();
-    re.is_match(s)
+	let re = Regex::new("^\\p{L}.*$").unwrap();
+    let res = re.is_match(s);
+	// println!("{s}\n start from csname? {res}");
+	res
 }
