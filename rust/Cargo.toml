@@ -1,8 +1,12 @@
 [package]
 name = "unicode-tipa"
-author = "jiyu8iighx"
+authors = ["jiyu8iighx"]
 version = "0.1.0"
 edition = "2021"
+description = "Command line tool for conversion from IPA characters encoding in Unicode to LaTeX TIPA package code."
+repository = "https://github.com/Expressive-Conlang-Bulletin/UnicodeTIPA"
+license = "MIT"
+categories = ["encoding", "science"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

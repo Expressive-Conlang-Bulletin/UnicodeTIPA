@@ -71,15 +71,15 @@ pub fn tokenize(t: Token
 	}
 }
 
-pub fn tokenize_str(str: String) -> Vec<Token> {
-	let l = &read_letters();
-	let m = &read_marks();
-	let cl = &read_combineleft();
-	let cb = &read_combineboth();
-	str.chars()
-		.map(|c| tokenize(Unknown(c as u32), l, m, cl, cb))
-		.collect()
-}
+// pub fn tokenize_str(str: String) -> Vec<Token> {
+// 	let l = &read_letters();
+// 	let m = &read_marks();
+// 	let cl = &read_combineleft();
+// 	let cb = &read_combineboth();
+// 	str.chars()
+// 		.map(|c| tokenize(Unknown(c as u32), l, m, cl, cb))
+// 		.collect()
+// }
 
 pub fn tokenize_withgrp_str(str: String) -> Vec<Token> {
 	let l = &read_letters();
