@@ -17,14 +17,21 @@ mod tone;
 mod group;
 mod combine;
 mod serialize;
+mod copy;
+
+const DEFAULT_SLEEP_DURATION: u64 = 100;
 
 #[derive(Parser)]
 #[clap(author, version, about, long_about = None)]
 struct Cli {
-    #[clap(short, long, arg_enum, default_value_t = LessSpace)]
+    #[clap(short='C', long, arg_enum, default_value_t = LessSpace)]
     cat: CatenateMethod,
     #[clap(short, long, arg_enum, default_value_t = Ligature)]
     tone: ToneMethod,
+    #[clap(short, long, help="Copy to clipboard instead of print to standard output.")]
+    copy: bool,
+    #[clap(short, default_value_t = DEFAULT_SLEEP_DURATION, help="If stuck or fail when copy, try to increase this.")]
+    sleep: u64,
     input: String
 }
 
@@ -60,6 +67,10 @@ fn main() {
     let tone_replaced = replace_tone(tokens, &conf);
     let combined = combine_tokens(tone_replaced);
     let res = TokenSequence(combined).to_string(&conf);
-    println!("{res}");
+    if cli.copy {
+        copy::copy_to_clipboard(res, &cli.sleep)
+    } else {
+        println!("{res}")
+    }
 }
 //they should be methods of TokenSeq?
