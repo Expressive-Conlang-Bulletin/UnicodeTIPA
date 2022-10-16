@@ -1,7 +1,7 @@
 [package]
 name = "unicode-tipa"
 authors = ["jiyu8iighx"]
-version = "0.2.0"
+version = "0.3.0" # Fix: use eprintln & a bug when tone is at the end
 edition = "2021"
 description = "Command line tool for conversion from IPA characters encoding in Unicode to LaTeX TIPA package code."
 repository = "https://github.com/Expressive-Conlang-Bulletin/UnicodeTIPA"

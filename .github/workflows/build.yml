@@ -1,0 +1,32 @@
+name: build
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build_for_ubuntu_latest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+      - name: Install Dependencies
+        run: |
+          sudo apt-get install -y libxcb-xfixes0-dev
+          sudo apt-get install -y libxcb-shape0
+      - name: Build Unicode-TIPA
+        run: |
+          cd rust/
+          cargo build --release
+          ls target/release/
+          chmod +x target/release/unicode-tipa
+      - name: Test Unicode-TIPA
+        run: |
+          rust/target/release/unicode-tipa -V
+          rust/target/release/unicode-tipa "˩"
+      - name: Upload Binary
+        uses: actions/upload-artifact@v3
+        with:
+          name: ubuntu-latest
+          path: rust/target/release/unicode-tipa
